@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 19, 2020 9:20:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJOHotel.TblOrder" table="tbl_order" catalog="hotelproject" optimistic-lock="version">
+        <id name="idOrder" type="java.lang.Integer">
+            <column name="id_order" />
+            <generator class="identity" />
+        </id>
+        <property name="namaUser" type="string">
+            <column name="nama_user" length="50" />
+        </property>
+        <property name="idPelanggan" type="int">
+            <column name="id_pelanggan" not-null="true" />
+        </property>
+        <property name="namaRoom" type="string">
+            <column name="nama_room" length="50" />
+        </property>
+        <property name="idRoom" type="int">
+            <column name="id_room" not-null="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="25" />
+        </property>
+        <property name="price" type="java.lang.Long">
+            <column name="price" />
+        </property>
+        <property name="checkIn" type="date">
+            <column name="check_in" length="10" />
+        </property>
+        <property name="checkOut" type="date">
+            <column name="check_out" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

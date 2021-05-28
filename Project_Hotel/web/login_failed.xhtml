@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Login</title>
+        <style>
+            .input_text[type=text],input[type=password]
+            {
+                background-color: aliceblue;
+                width: 80%;
+                padding: 10px 18px;
+                margin: 5px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+            }
+            
+            .button_log
+            {
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 50%;
+            }
+            
+            .model-content
+            {
+                background-color: #fefefe;
+                margin: 5% auto 15% auto;
+                border: 1px solid #888;
+                width: 50%;
+                text-align: center;            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    </h:head>
+    <h:body>
+        <div class="container-login100" style="background-image: url('images/hotel1.jpg');">
+        <h:form class="model-content">
+            <h2>Login</h2>
+            <h:inputText a:placeholder="Username" class="input_text" value="#{tblAdmin.username}"/>
+            <h:inputSecret a:placeholder="Password" class="input_text" value="#{tblAdmin.password}"/>
+            <h:commandButton value="Login" class="button_log" action="#{tblAdmin.login_user()}"/><br/>
+            <h:commandButton value="Register" class="button_log" action="register.xhtml"/>
+            <h2>Your Email or Password is incorrect</h2>
+        </h:form>
+        </div>
+    </h:body>
+</html>
